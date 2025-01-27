@@ -4,6 +4,7 @@ import {
   inCreaseQuatity,
   removeItemFromCart,
 } from "../lip/cartSlice";
+import toast from "react-hot-toast";
 const RowCard = ({ item }) => {
   let dispatch = useDispatch();
 
@@ -17,7 +18,7 @@ const RowCard = ({ item }) => {
             alt="Apple Watch"
           />
         </td>
-        <td className="px-3 py-2 font-semibold text-gray-900 text-lg">
+        <td className="px-1 py-2 text-center font-semibold text-gray-900 text-sm md:text-lg">
           Apple Watch
         </td>
         <td className="px-6 py-4">
@@ -82,7 +83,12 @@ const RowCard = ({ item }) => {
         </td>
         <td className="px-6 py-4">
           <button
-            onClick={() => dispatch(removeItemFromCart(item.id))}
+            onClick={() => {
+              dispatch(removeItemFromCart(item.id));
+              toast.success("The product is removed from cart successfully", {
+                position: "top-center",
+              });
+            }}
             className="font-medium bg-red-600 hover:bg-red-700 py-2 px-3 text-white rounded-md text-[16px]"
           >
             Remove

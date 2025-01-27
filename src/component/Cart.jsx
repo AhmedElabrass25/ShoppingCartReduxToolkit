@@ -9,7 +9,7 @@ const Cart = () => {
   return (
     <section className="text-red-500">
       <div className="container">
-        <div className="row overflow-x-scroll sm:overflow-hidden">
+        <div className="row overflow-x-scroll md:overflow-hidden">
           <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
             <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
               <tr>
@@ -48,15 +48,15 @@ const Cart = () => {
           {/* >>>>>>>>>>>
             Cart Details (Button(Go to home) & TotalPrice)
           >>>>>>>>>>>>>>>*/}
-          <div className="w-full flex items-center justify-between">
-            <h2 className="text-2xl my-10 text-black">
+          <div className="w-full flex-col sm:flex-row flex items-center justify-between mt-10">
+            <h2 className="text-2xl mb-5 text-black">
               {" "}
               Total price :{" "}
               <span className="text-blue-700"> ${totalPrice}</span>
             </h2>
             <button
               onClick={() => navigate("/")}
-              className="w-fit py-2 px-4 bg-orange-600 hover:bg-orange-500 transition-all duration-200 ease-in text-white rounded-md"
+              className="w-fit py-2 px-4 mb-5 bg-orange-600 hover:bg-orange-500 transition-all duration-200 ease-in text-white rounded-md"
             >
               Go To Shopping
             </button>
