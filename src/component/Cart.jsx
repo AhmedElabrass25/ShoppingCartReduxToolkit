@@ -48,19 +48,18 @@ const Cart = () => {
           {/* >>>>>>>>>>>
             Cart Details (Button(Go to home) & TotalPrice)
           >>>>>>>>>>>>>>>*/}
-          <div className="w-full flex-col sm:flex-row flex items-center justify-between mt-10">
-            <h2 className="text-2xl mb-5 text-black">
-              {" "}
-              Total price :{" "}
-              <span className="text-blue-700"> ${totalPrice}</span>
-            </h2>
-            <button
-              onClick={() => navigate("/")}
-              className="w-fit py-2 px-4 mb-5 bg-orange-600 hover:bg-orange-500 transition-all duration-200 ease-in text-white rounded-md"
-            >
-              Go To Shopping
-            </button>
-          </div>
+        </div>
+        <div className="w-full flex-col sm:flex-row flex items-center justify-center mt-10">
+          <h2 className="text-2xl mb-5 text-black sm:me-12">
+            {" "}
+            Total price : <span className="text-blue-700"> ${totalPrice}</span>
+          </h2>
+          <button
+            onClick={() => navigate("/")}
+            className="w-fit py-2 px-4 mb-5 bg-orange-600 hover:bg-orange-500 transition-all duration-200 ease-in text-white rounded-md"
+          >
+            Go To Shopping
+          </button>
         </div>
       </div>
     </section>

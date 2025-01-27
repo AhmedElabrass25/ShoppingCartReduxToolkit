@@ -51,7 +51,7 @@ const ProductDetails = () => {
               <p className="text-center capitalize text-[18px] text-gray-500 mb-5">
                 {product?.description}
               </p>
-              <div className="w-full text-center ">
+              <div className="w-full text-center mb-10">
                 <button
                   onClick={() => {
                     dispatch(addToCart(product));
